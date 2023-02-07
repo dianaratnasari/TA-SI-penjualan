@@ -1,0 +1,866 @@
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cambria;
+ }
+ .container{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "header header"
+                         "aside main"
+                         "aside main"
+                         "aside footer";
+    grid-template-columns: 270px 80%;
+    grid-template-rows: 55px 65% 56% 30px;
+ }
+ 
+ /* header */
+ header{ 
+   grid-area:header;
+    background-color: 	#a56cdb;
+  display: flex;
+  justify-content: space-between;
+ 
+ }
+ header p, h6{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   color: #f4f1f7;
+ }
+ header p{
+     margin-left: 80px;
+    font-size: 25px;
+    font-weight: bold;
+ }
+ header h6{
+     margin-right: 20px;
+     font-size: 12px;
+     font-family: sans-serif;
+ }
+ 
+ /* aside */
+ aside{
+    grid-area: aside;
+    background-color:   #352841; 
+    overflow: hidden;
+ }
+ aside ul{
+    list-style: none;
+ }
+ aside ul li{
+    border-bottom:2px solid #40324d ;
+     line-height: 60px;
+     overflow: hidden;
+ }
+ aside ul li a{
+     display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+    color: #c0bdc4 ;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: none;
+    position: relative;
+    border-left: 3px solid transparent;
+ }
+ aside ul li a .fas{
+   display: flex;
+   align-content: center;
+   line-height: 60px;
+   padding-right: 15px;
+}
+ aside ul li a:hover {
+    color: white;
+    background: #3d304b; 
+    border-left-color: #c0bdc4 ;
+ }
+ 
+
+
+ 
+ /* main */
+ main{
+    grid-area: main; 
+     background-color: none;
+ }
+.search{
+   display: flex;
+   justify-content: flex-end;
+ }
+ .cari{
+    display: flex;
+    border: 2px solid rgb(161, 157, 157);
+    outline: none;
+    border-radius: 0px;
+    margin-top: 15px;
+    margin-right: 35px;
+    margin-left: 15px;
+    font-size: 12px;
+    text-align: center;
+ }
+ .label_search{
+   display: flex;
+   font-size: 18px;
+   color: rgb(117, 112, 112);
+   margin-top: 18px;
+   
+ }
+ 
+ 
+ /* footer */
+ footer{
+    grid-area: footer;
+    background-color: 	#d2d2dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: 14px;
+ }
+
+ /* Login */
+ 
+ #wrapper {
+     background-color: 	#833a83;
+     width: 400px;
+     height: 320px;
+     margin-top: 150px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 20px;
+     box-shadow: 4px 4px 4px rgba(0,0,0,0.8);
+     border-radius: 4px;
+ }
+ .login input {
+     border: 1px solid #ddd;
+     padding: 10px;
+     width: 95%;
+     border-radius: 2px;
+     outline: none;
+     margin-left: 0px;
+     margin-top: 10px;
+     margin-bottom: 20px;
+ }
+ label, h1 {
+     font-weight: bold;
+     color: white;
+ }
+ h1 {
+     text-align: center;
+     font-size: 40px;
+ }
+ button {
+     background-color: 	#833a83;
+     border: 2px solid white;
+     border-radius: 4px;
+     padding: 12px;
+     width: 110px;
+     color: white;
+    font-weight: bold;
+ }
+ button:hover{
+     background-color: #3e093f;
+     border: 2px solid #3e093f;
+ }
+ 
+ /* Halaman tabel */
+ 
+ .judul{
+     margin: 20px 40px 20px 40px;
+     color: rgb(75, 72, 72);
+ }
+ 
+  .table{
+     width: 93%;
+     margin-top: 5.5%;
+     margin-left: 38px;
+     border-collapse: collapse;
+  }
+  .table th, .tabel_penjualan th{
+     border: 1px solid #ccc;
+     padding: 15px;
+  }
+ 
+ .table td{
+     border: 1px solid #ccc;
+     padding: 15px;
+  }
+ .table th{
+   background: #eee;
+    
+  }
+  
+  .tombol_tambah, .tombol_cetaklaporan{
+     display: inline-block;
+     padding: 8px 25px;
+     margin-top: 20px;
+     border-radius: 3px;
+     color: #fff;
+     font-size: 18px;
+     text-decoration: none;
+     cursor: pointer;
+  }
+  .tombol_tambah{
+   background: #6a72e6;
+   margin-left: 40px;
+   box-shadow: 4px 4px 4px #010642;
+   
+  }
+  
+  .tombol_cetaklaporan{
+   background:  #594d64; 
+   margin-left: 10px;
+  }
+  .tombol_tambah:hover{
+     background-color: #424bcf;
+  }
+  .tombol_cetaklaporan:hover{
+   background:  #352841; 
+  }
+  
+  .tombol_edit, .tombol_hapus, .tombol_cetaknota{
+     padding: 10px 15px;
+     border-radius: 2px;
+     font-size: 14px;
+     color: white;
+     text-decoration: none;
+    
+  }
+  .tombol_edit{
+     background-color: #389e38;
+     margin-right: 15px;
+  }
+  .tombol_hapus{ 
+     background-color: #f32d2d; 
+  }
+  .tombol_edit:hover{
+     background-color: #085a08;
+  }
+  .tombol_hapus:hover{ 
+     background-color:#8b0303;   
+  }
+  .tombol_cetaknota{
+   background:  #594d64;
+   margin-right: 15px;
+  }
+
+.tombol_cetaknota:hover{
+   background:  #251b2e; 
+}
+  /* Halaman Form */
+ 
+ .form-group{
+      display: flex;
+      justify-content: flex-start;
+      width: 80%;
+      align-items: center;
+     margin-left: 40px;
+     margin-bottom: 25px;
+     
+  }
+  .form-group label{
+     display: flex;
+     width: 20%;
+     font-weight: bold;
+     color: rgb(75, 72, 72);
+     
+  }
+ .input input{
+      display: flex;
+      align-items: center;
+      width: 400px;
+      height:40px; 
+      outline: none;
+      border: 1px solid  rgb(146, 142, 142);
+      padding-left: 10px;
+  }
+
+  .tombol_simpan, .tombol_reset{
+      padding: 13px 20px;
+      color: white;
+      margin-right: 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 3px;
+  }
+  .tombol_simpan{ 
+     background: #05193f;
+  }
+  .tombol_simpan:hover{ 
+     background: #325391;
+  }
+  .tombol_reset{ 
+     background: #155818; 
+  }
+  .tombol_reset:hover{ 
+     background: #3e8642; 
+  }
+
+/* halaman transaksi */
+.form-pembayarantransaksi{
+  
+   background-color:   #e2c8ec;
+   border : 2px solid #d6bbe0;
+   box-shadow: 2px 2px 2px #67317a;
+   height: 16%;
+    width: 93.5%;
+     margin-top: 4.5%; 
+     margin-left: 30px;
+     z-index: 1;
+}
+.bayartransaksi{
+   display: flex;
+}
+.label-bayar{
+   display: flex;
+   margin-left: 15px;
+   margin-top: 30px;
+   width: 130px;
+   font-size: 30px;
+   font-weight: bold;
+   color: black;
+}
+.input-bayar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   width: 280px;
+   height: 65px;
+   outline: none;
+   border: none;
+   background-color: white;
+   padding-left: 15px;
+   font-size: 35px;
+   font-weight: bold;
+  
+
+}
+.tombol{
+   display: flex;
+}
+.tombol_cetak, .tombol_resettransaksi{
+   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border-radius: 5px;
+   font-size: 16px;
+   letter-spacing: 1px;
+   border:none;
+   color: white;
+   text-decoration: none;
+   margin-left: 65px;
+ }
+ .tombol_cetak{
+   
+   padding: 11px 18px;
+    margin-top: -110px;
+  background: #8043b9;
+ }
+ .tombol_cetak:hover{
+    background-color: #411768;
+    border: none;
+ }
+ 
+ .tombol_resettransaksi{
+   padding: 10px 30px;
+  margin-top: -17px;
+   font-size: 18px;
+   font-weight: bold;
+    background:  #594d64;   
+ }
+ .tombol_resettransaksi:hover{
+    background:  #251b2e;   
+ }
+
+.transaksi{
+   position: absolute;
+   float: left;
+   width: 20%;
+   height: 43%;
+   margin-top: 14%;
+   margin-left: 30px;
+   background-color: 	#c09be4;
+   box-shadow: 5px 5px 5px #441e68;
+   font-size: 16px;
+  
+}
+
+.transaksi h3{
+   color:rgb(48, 46, 46);
+   letter-spacing: 1px;
+ line-height: 50px; 
+   text-align: center;
+   border-bottom:2px solid 	#a177ca;
+}
+.input_transaksi input, .input_transaksi select{
+  width: 230px;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  margin-top: 8px;
+}
+.tombol_tambahtransaksi{
+   position: absolute;
+   margin-top: 14px;
+   background: #7448a0;
+   padding: 15px 30px;
+   margin-left: 70px;
+   border-radius: 5px;
+   font-size: 16px;
+   padding-left: 25px;
+   border:none;
+   color: white;
+   
+}
+.tombol_tambahtransaksi:hover{
+   border:none;
+   background: #542781;
+}
+.form-transaksi label , .input_transaksi input, .input_transaksi select{ 
+ margin-left: 20px;
+}
+.form-transaksi label{
+   display: flex;
+   justify-content: flex-start;
+ color:rgb(48, 46, 46);
+ margin-top: 20px;
+ 
+}
+
+.tbl{
+   display: flex;
+}
+.tabel_penjualan{
+   position: absolute;
+   margin-left: 340px;
+  margin-top: -8%;
+   width: 40%;
+   border-collapse: collapse;
+   margin-top:25px;
+   font-size: 14px;
+  
+}
+
+
+.tabel_penjualan th{
+ 
+   border: 1px solid rgb(97, 94, 94);
+
+   background : #c09be4;
+}
+
+.tabel_penjualan td{
+   border: 1px solid rgb(97, 94, 94);
+   padding: 10px;
+}
+
+
+.tombol_delete{
+   padding: 5px 15px;
+   color: white;
+   font-size: 13px;
+   background-color: #f32d2d; 
+   text-decoration: none;
+}
+.tombol_delete:hover{
+   background-color:#8b0303;
+}
+.tombol_transaksi{
+   margin-left: 31%;
+   margin-top:40px;
+}
+
+
+/*  halaman transaksi_bayar*/
+.form-transaksibayar{
+ width: 100%;
+ margin-left: 25%;
+   
+}
+.nama-nota{
+   width: 130%;
+  margin-top: 0px;
+  margin-left: 6%;
+}
+
+
+.table-nota{
+   border-collapse: collapse;
+   width: 45%;
+   margin-top: 7px;
+}
+.table-nota th{
+   width: 20%;
+   border: none;
+   padding: 15px;
+}
+
+.table-nota td{
+   width: 20%;
+   border: none;
+   padding: 15px;
+}
+.table-nota th{
+ background: none;
+  
+}
+.below-nota{
+   margin-top: 0px;
+}
+.below-nota label{
+   margin-left: 21.7%;
+   color: black;
+   font-size: 14px;
+  padding: 8px 40px;
+}
+.below-nota input{
+   font-size: 14px;
+   font-weight: bold;
+   padding: 8px 40px;
+   border: none;
+   outline: none;
+  
+}
+
+.form-pembayaranbelanja{
+   position: relative;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+.label1, .label2, .label3, .input_total input, .input_bayar input, .input_kembalian input, .tombol_cetaktransaksi, .tombol_kembali{
+   position: absolute;
+  display: flex;
+  align-items: center;
+   margin-left: -20%;
+margin-top: 9%;
+   font-size: 14px;
+}
+.label1, .label2, .label3{
+   color: black;
+}
+.input_total input, .input_bayar input, .input_kembalian input{
+   margin-left: -11%;
+   border: 1px solid black;
+}
+.label1{
+   margin-top: 9.3%;
+}
+.input_bayar input{
+   margin-top: 12%;
+}
+.label2{
+   margin-top: 12.3%;
+}
+.input_kembalian input{
+   margin-top: 15%;
+}
+.label3{
+   margin-top: 15.3%;
+}
+.tombol{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.tombol_cetaktransaksi, .tombol_kembali{
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 3px;
+   font-size: 14px;
+   font-weight: bold;  
+   color: white; 
+   margin-left: 13%
+}
+.tombol_cetaktransaksi{
+   margin-top: 10%;
+   background:  #594d64;
+   
+}
+.tombol_cetaktransaksi:hover{
+   background:  #251b2e; 
+}
+.tombol_kembali{
+   margin-top: 14%;
+   background: #05193f;
+}
+.tombol_kembali:hover{
+   background: #325391;
+}
+
+
+
+
+
+
+/* form ambil daftar produk ----halaman pembelian */
+
+.form-tambahpembelian{
+   position: absolute;
+   background-color:   #ece9ec;
+   border : 2px solid #dad8da;
+   height: 22%;
+    width:40%;
+     margin-left: 38px;
+     margin-top: 4.5%;
+     z-index: 1;
+}
+.nama_tabelpembelian{
+   width: 40%;
+   height: 35px;
+    margin-top: 2%; 
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+}
+.nama_tabelpembelian, .tabelpembelian{
+   position: absolute;
+   display: flex;
+    margin-left: 38px;
+    background: 	#a56cdb;
+    border: 4px solid 	#a56cdb;
+   align-items: center;
+   z-index: 2;
+  
+}
+.judul-tabelpembelian, .judul-tabelkategori{
+   color: white;
+   padding-left: 20px;
+   align-items: center;
+   font-size: 18px;
+ width: 40%;
+   font-weight: bold;
+}
+.tabelpembelian, .tabelkategori{
+   width: 74.5%;
+   margin-top: 1%; 
+   height: 45px;
+}
+.searchpembelian, .searchkategori{
+   display: flex;
+   position: absolute;
+   align-items: center;
+   z-index: 3;
+}
+.label_searchpembelian, .label_searchkategori{
+   margin-left: 40.5%;
+   margin-right: 10px;
+}
+.caripembelian, .carikategori{ 
+  outline: none;
+  border: none;
+  width: 25%;
+  height: 25px;
+    font-size: 14px;
+    padding-left: 20px;
+    margin-right: 37px;
+}
+.pembelian, .kategori{
+   display: flex;
+}
+.label-pembelian{
+   display: flex;
+   margin-left: 15px;
+   margin-top: 15px;
+   width: 150px;
+   color: rgb(61, 60, 60);
+   font-size: 16px;
+}
+.input-pembelian, .i select{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   width: 250px;
+   height: 30px;
+   outline: none;
+   border: none;
+   background-color: white;
+   font-size: 16px;
+   color: rgb(61, 60, 60);
+   margin-left: -15px;
+
+}
+.input-pembelian{
+   padding-left: 15px;
+   margin-left: -15px;
+}
+
+.tombol-pembelian{
+   display: flex;
+}
+.btn-tambahpembelian, .btn-resetpembelian{
+   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border-radius: 5px;
+   font-size: 14px;
+   border:none;
+   color: white;
+   text-decoration: none;
+   margin-left: 82%;
+ }
+ .btn-tambahpembelian{
+   width: 80px;
+   height: 38px;
+    margin-top: -95px;
+  background: #8043b9;
+ }
+ .btn-tambahpembelian:hover{
+    background-color: #411768;
+    border: none;
+ }
+ 
+ .btn-resetpembelian{
+   padding: 10px 21px;
+  margin-top: -42px;
+  font-size: 16px;
+    background:  #594d64;   
+ }
+ .btn-resetpembelian:hover{
+    background:  #251b2e;   
+ }
+
+
+
+ /*  halaman stok produk*/
+ 
+ .tabelstok{
+   position: absolute;
+   display: flex;
+   width: 74.4%;
+   margin-top: 1.2%; 
+   height: 45px;
+    margin-left: 38px;
+    background: 	#a56cdb;
+    border: 4px solid 	#a56cdb;
+   align-items: center;
+   z-index: 2;
+  
+}
+.judul-tabelstok{
+   color: white;
+   padding-left: 20px;
+   align-items: center;
+   font-size: 18px;
+width: 40%;
+   font-weight: bold;
+}
+.searchstok{
+   display: flex;
+   position: absolute;
+   align-items: center;
+   z-index: 3;
+}
+.label_searchstok{
+   margin-left: 40.5%;
+   margin-right: 10px;
+}
+.caristok{ 
+   outline: none;
+   border: none;
+   width: 25%;
+   height: 25px;
+     font-size: 14px;
+     padding-left: 20px;
+     margin-right: 37px;
+ }
+
+ /*  halaman kategori */
+ .nama_tabelkategori{
+   width: 55%;
+   height: 35px;
+    margin-top: 2%; 
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+}
+.form-tambahkategori{
+   position: absolute;
+   background-color:   #ece9ec;
+   border : 2px solid #dad8da;
+   height: 12%;
+    width:55%;
+     margin-left: 38px;
+     margin-top: 4.5%;
+     z-index: 1;
+}
+.label-kategori{
+   display: flex;
+   margin-left: 15px;
+   margin-top: 22px;
+   width: 150px;
+   color: rgb(61, 60, 60);
+   font-size: 16px;
+}
+.input-kategori{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 17px;
+   width: 350px;
+   height: 40px;
+   outline: none;
+   border: none;
+   background-color: white;
+   font-size: 16px;
+   color: rgb(61, 60, 60);
+   padding-left: 15px;
+   margin-left: -25px;
+
+}
+.tombol-kategori{
+   display: flex;
+}
+.btn-tambahkategori, .btn-resetkategori{
+   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border-radius: 5px;
+   font-size: 14px;
+   border:none;
+   color: white;
+   text-decoration: none;
+ }
+ .btn-tambahkategori{
+   width: 80px;
+   height: 38px;
+    margin-top: -42px;
+  background: #8043b9;
+  margin-left: 73%;
+ }
+ .btn-tambahkategori:hover{
+    background-color: #411768;
+    border: none;
+ }
+ 
+ .btn-resetkategori{
+   margin-left: 87%;
+   padding: 10px 21px;
+  margin-top: -42px;
+  font-size: 16px;
+    background:  #594d64;   
+ }
+ .btn-resetkategori:hover{
+    background:  #251b2e;   
+ }
+ 
+ .nama_tabelkategori, .tabelkategori{
+   position: absolute;
+   display: flex;
+    margin-left: 38px;
+    background: 	#a56cdb;
+    border: 4px solid 	#a56cdb;
+   align-items: center;
+   z-index: 2;
+  
+}
